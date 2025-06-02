@@ -1,13 +1,15 @@
-#EXERCÍCIO_01: ##Objetivo: O código tem como finalidade simular o lançamento de dois dados e verificar, por meio de repetidas simulações, com que frequência ocorre o resultado (6, 6) — ou seja, quando ambos os dados caem com a face 6. A ideia é demonstrar, na prática, como a probabilidade teórica de 1/36 (~2,78%)-) se aproxima da realidade à medida que o número de experimentos aumenta.
+# EXERCÍCIO_01:
+  ## Objetivo: 
+  O código tem como finalidade simular o lançamento de dois dados e verificar, por meio de repetidas simulações, com que frequência ocorre o resultado (6, 6) — ou seja, quando ambos os dados caem com a face 6. A ideia é demonstrar, na prática, como a probabilidade teórica de 1/36 (~2,78%)-) se aproxima da realidade à medida que o número de experimentos aumenta.
 
-###Descrição do Código:
+### Descrição do Código:
 Inclusão de bibliotecas:
 
-<iostream>: permite a entrada e saída de dados no console.
+iostream: permite a entrada e saída de dados no console.
 
-<cstdlib>: usada para a função rand() que gera números aleatórios.
+cstdlib: usada para a função rand() que gera números aleatórios.
 
-<ctime>: utilizada para a função time(0), que inicializa a semente da aleatoriedade com base no tempo atual, garantindo resultados diferentes a cada execução.
+ctime: utilizada para a função time(0), que inicializa a semente da aleatoriedade com base no tempo atual, garantindo resultados diferentes a cada execução.
 
 Inicialização do gerador de números aleatórios:
 
@@ -47,16 +49,18 @@ O número total de lançamentos;
 O número de vezes que saiu (6, 6);
 
 A frequência percentual com que isso aconteceu.
-#EXERCÍCIO_02: ##Objetivo do Programa: Este programa é um jogo interativo no qual o computador escolhe aleatoriamente um número entre 1 e 100, e o usuário tenta adivinhar qual é esse número. Após cada tentativa, o programa informa se o número escolhido pelo usuário é maior ou menor do que o número secreto. O jogo continua até que o usuário acerte o número, e ao final é perguntado se ele deseja jogar novamente.
+# EXERCÍCIO_02: 
+  ## Objetivo do Programa: 
+  Este programa é um jogo interativo no qual o computador escolhe aleatoriamente um número entre 1 e 100, e o usuário tenta adivinhar qual é esse número. Após cada tentativa, o programa informa se o número escolhido pelo usuário é maior ou menor do que o número secreto. O jogo continua até que o usuário acerte o número, e ao final é perguntado se ele deseja jogar novamente.
 
-###Descrição Técnica do Código:
+  ### Descrição Técnica do Código:
 Bibliotecas Utilizadas:
 
-include <iostream>: usada para entrada (cin) e saída (cout) de dados.
+iostream: usada para entrada (cin) e saída (cout) de dados.
 
-include <cstdlib>: fornece a função rand() para gerar números aleatórios.
+cstdlib: fornece a função rand() para gerar números aleatórios.
 
-include <ctime>: usada para inicializar a semente do gerador de números aleatórios com base no tempo atual.
+ctime: usada para inicializar a semente do gerador de números aleatórios com base no tempo atual.
 
 Inicialização da Aleatoriedade:
 
@@ -184,7 +188,186 @@ O código trata votos inválidos com uma mensagem, sem causar falhas.
 Em caso de empate, o primeiro a atingir a maior quantidade de votos é considerado o vencedor.
 
 O uso de vector torna o código mais flexível e seguro do que arrays tradicionais.
-#EXERCÍCIO_04: ##Objetivo do Programa: Este programa simula um diário escolar simples, permitindo:
+
+ Objetivo do Programa:
+Este programa realiza uma simulação de eleição entre alunos, onde:
+
+Cada aluno vota em outro aluno como representante;
+
+O sistema contabiliza os votos e determina:
+
+O representante da turma (aluno mais votado),
+
+O vice-representante (segundo mais votado).
+
+🧾 Funcionamento do Código:
+Inclusão de Bibliotecas:
+
+cpp
+Copiar
+Editar
+#include <iostream>
+#include <vector>
+iostream: entrada e saída de dados.
+
+vector: estrutura de dados dinâmica para armazenar os votos.
+
+Entrada de Dados:
+
+O usuário informa quantos alunos (n) participam.
+
+cpp
+Copiar
+Editar
+cin >> n;
+Inicialização da Tabela de Votos:
+
+cpp
+Copiar
+Editar
+vector<int> votos(n + 1, 0);
+Um vetor de tamanho n + 1 é criado, onde:
+
+A posição i armazena a quantidade de votos recebidos pelo aluno i.
+
+A posição 0 não é usada (por isso n + 1).
+
+Entrada dos Votos:
+
+Cada aluno digita o número do candidato em quem vota.
+
+Se o voto for válido (entre 1 e n), ele é contabilizado.
+
+Votos inválidos são ignorados com mensagem de aviso.
+
+Contagem e Determinação dos Eleitos:
+
+Variáveis:
+
+representante: armazena o número do mais votado.
+
+vice: armazena o número do segundo mais votado.
+
+maxVotos e segundoMaxVotos: armazenam as maiores quantidades de votos.
+
+O programa percorre o vetor votos para identificar os dois alunos mais votados.
+
+Exibição dos Resultados:
+
+cpp
+Copiar
+Editar
+cout << "Representante da turma será o aluno " << representante
+     << ", que obteve " << maxVotos << " votos." << endl;
+cout << "Vice-representante será o aluno " << vice
+     << ", que obteve " << segundoMaxVotos << " votos." << endl;
+📌 Exemplo de Execução:
+java
+Copiar
+Editar
+Digite o número de alunos: 5
+Digite os 5 votos dos alunos (números de 1 a 5):
+2
+3
+2
+5
+3
+
+Representante da turma será o aluno 2, que obteve 2 votos.
+Vice-representante será o aluno 3, que obteve 2 votos.
+
+# EXRECÍCIO_03:
+## Objetivo do Programa:
+Este programa realiza uma simulação de eleição entre alunos, onde:
+
+Cada aluno vota em outro aluno como representante;
+
+O sistema contabiliza os votos e determina:
+
+O representante da turma (aluno mais votado),
+
+O vice-representante (segundo mais votado).
+
+🧾 Funcionamento do Código:
+Inclusão de Bibliotecas:
+
+cpp
+Copiar
+Editar
+iostream
+vector
+iostream: entrada e saída de dados.
+
+vector: estrutura de dados dinâmica para armazenar os votos.
+
+Entrada de Dados:
+
+O usuário informa quantos alunos (n) participam.
+
+cpp
+Copiar
+Editar
+cin >> n;
+Inicialização da Tabela de Votos:
+
+cpp
+Copiar
+Editar
+vector<int> votos(n + 1, 0);
+Um vetor de tamanho n + 1 é criado, onde:
+
+A posição i armazena a quantidade de votos recebidos pelo aluno i.
+
+A posição 0 não é usada (por isso n + 1).
+
+Entrada dos Votos:
+
+Cada aluno digita o número do candidato em quem vota.
+
+Se o voto for válido (entre 1 e n), ele é contabilizado.
+
+Votos inválidos são ignorados com mensagem de aviso.
+
+Contagem e Determinação dos Eleitos:
+
+Variáveis:
+
+representante: armazena o número do mais votado.
+
+vice: armazena o número do segundo mais votado.
+
+maxVotos e segundoMaxVotos: armazenam as maiores quantidades de votos.
+
+O programa percorre o vetor votos para identificar os dois alunos mais votados.
+
+Exibição dos Resultados:
+
+cpp
+Copiar
+Editar
+cout << "Representante da turma será o aluno " << representante
+     << ", que obteve " << maxVotos << " votos." << endl;
+cout << "Vice-representante será o aluno " << vice
+     << ", que obteve " << segundoMaxVotos << " votos." << endl;
+📌 Exemplo de Execução:
+java
+Copiar
+Editar
+Digite o número de alunos: 5
+Digite os 5 votos dos alunos (números de 1 a 5):
+2
+3
+2
+5
+3
+
+Representante da turma será o aluno 2, que obteve 2 votos.
+Vice-representante será o aluno 3, que obteve 2 votos.
+
+
+# EXERCÍCIO_04: 
+  ## Objetivo do Programa: 
+  Este programa simula um diário escolar simples, permitindo:
 
   Entrada de nomes e notas de até 50 alunos,
   
@@ -203,11 +386,11 @@ O uso de vector torna o código mais flexível e seguro do que arrays tradiciona
   Descrição Técnica do Código:
   Inclusão de Bibliotecas:
   
-  include <iostream>: entrada/saída de dados.
+ iostream: entrada/saída de dados.
   
-  include <string>: manipulação de nomes dos alunos.
+ string: manipulação de nomes dos alunos.
   
-  include <iomanip>: formatação da saída com setw().
+  include <omanip: formatação da saída com setw().
   
   Definições Iniciais:
   
