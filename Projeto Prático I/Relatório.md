@@ -1,6 +1,6 @@
 #EXERCÍCIO_01:
   ##Objetivo:
-    O código tem como finalidade simular o lançamento de dois dados e verificar, por meio de repetidas simulações, com que frequência ocorre o resultado (6, 6) — ou seja, quando ambos os dados caem com a face 6. A ideia é demonstrar, na prática, como a probabilidade teórica de 1/36 (~2,78%) se aproxima da realidade à medida que o número de experimentos aumenta.
+    O código tem como finalidade simular o lançamento de dois dados e verificar, por meio de repetidas simulações, com que frequência ocorre o resultado (6, 6) — ou seja, quando ambos os dados caem com a face 6. A ideia é demonstrar, na prática, como a probabilidade teórica de 1/36 (~2,78%)-) se aproxima da realidade à medida que o número de experimentos aumenta.
     
     ###Descrição do Código:
     Inclusão de bibliotecas:
